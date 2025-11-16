@@ -17,7 +17,6 @@
         <module>server-framework</module>
         <module>server-generator</module>
         <module>server-quartz</module>
-        <module>server-agriculture</module>
     </modules>
     <description>管理系统</description>
 
@@ -40,6 +39,7 @@
         <poi.version>4.1.2</poi.version>
         <velocity.version>2.3</velocity.version>
         <jwt.version>0.9.1</jwt.version>
+        <jsr305.version>3.0.2</jsr305.version>
         <!-- override dependency version -->
         <tomcat.version>9.0.102</tomcat.version>
         <logback.version>1.2.13</logback.version>
@@ -207,6 +207,13 @@
                 <version>${mybatis-plus.version}</version>
             </dependency>
 
+            <!-- JSR-305 注解支持 -->
+            <dependency>
+                <groupId>com.google.code.findbugs</groupId>
+                <artifactId>jsr305</artifactId>
+                <version>${jsr305.version}</version>
+            </dependency>
+
             <!-- 核心模块-->
             <dependency>
                 <groupId>com.server</groupId>
@@ -239,13 +246,6 @@
             <dependency>
                 <groupId>com.server</groupId>
                 <artifactId>server-quartz</artifactId>
-                <version>${server.version}</version>
-            </dependency>
-
-            <!-- 鱼菜核心 -->
-            <dependency>
-                <groupId>com.server</groupId>
-                <artifactId>server-agriculture</artifactId>
                 <version>${server.version}</version>
             </dependency>
 

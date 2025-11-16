@@ -38,8 +38,16 @@ import TodaySales from './widget/TodaySales.vue'
 import { useSettingStore } from '@/store/modules/setting'
 import { useCommon } from '@/composables/useCommon'
 import { ref, onMounted } from 'vue'
-import type { ConsoleTotalInfo, ConsoleToTalData } from '@/types/agriculture/console'
-import event from '@/utils/event'
+
+// 控制台数据类型定义
+interface ConsoleTotalInfo {
+  label: string
+  value: number
+  change: string
+  icon: string
+  class: string
+  color: string
+}
 
 const settingStore = useSettingStore()
 const currentGlopTheme = computed(() => settingStore.systemThemeType)
@@ -156,26 +164,7 @@ const envTableData = [
   { type: '蔬菜', pond: '二区', temp: 29.7, humidity: 70, lux: 14800, ph: 6.7, waterTemp: '', oxygen: '', ammonia: '', nitrite: '', time: '2025-02-27 09:00' }
 ]
 
-// 移除 API 调用和事件监听
-// const getCardList = async () => {
-//   const res = await AgricultureConsoleService.listAgriculture()
-//   cardList.value = res.data
-// }
-//
-// const getCountList = async () => {
-//   const res = await AgricultureConsoleService.listBatchTask()
-//   countList.value = res.data
-// }
-//
-// event.on('message', (data: ConsoleToTalData) => {
-//   cardList.value = data.agriculture
-//   countList.value = data.batchTask
-// })
-//
-// onMounted(() => {
-//   getCardList()
-//   getCountList()
-// })
+// API 调用和事件监听已移除
 </script>
 
 <style lang="scss" scoped>

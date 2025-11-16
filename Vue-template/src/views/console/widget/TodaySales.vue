@@ -29,7 +29,16 @@ import { useI18n } from 'vue-i18n'
 import { useECharts } from '@/utils/echarts/useECharts'
 import type { EChartsOption } from 'echarts'
 import { useSettingStore } from '@/store/modules/setting'
-import type { ConsoleTotalInfo } from '@/types/agriculture/console'
+
+// 控制台数据类型定义
+interface ConsoleTotalInfo {
+  label: string
+  value: number
+  change: string
+  icon: string
+  class: string
+  color: string
+}
 
 const props = defineProps({
   salesData: { type: Array<ConsoleTotalInfo>, default: () => [] }

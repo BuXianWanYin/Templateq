@@ -119,6 +119,12 @@
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
 
+        <!-- JSR-305 注解支持 -->
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
